@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit ,EventEmitter,Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-fils',
@@ -7,11 +8,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FilsComponent implements OnInit {
   image="https://ak.picdn.net/shutterstock/videos/1025294411/thumb/1.jpg?ip=x480"
-  @Input() ordre:string="";
-  @Input() villenaissance :string="";
+ /* @Input() ordre:string=""; exemple 1*/ 
+
+@Input () nom: string=""
+  @Output() message = new EventEmitter<number>();
+  note : number =0
+  buttonStatus :boolean =false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  send(){
+    this.message.emit(this.note);
+    this.buttonStatus =true;
   }
 
 }

@@ -1,2 +1,8 @@
 
-<li><img   [src]="image" id="img1"/> je suis le : {{ordre}} fils et je suis de {{villenaissance}} <!--<ng-content></ng-content--></li>
+<!--li><img   [src]="image" id="img1"/> je suis le : {{ordre}} fils et je suis de {{villenaissance}} <ng-content></ng-content></li-->
+    <h6> {{nom}} </h6>
+    <input type= number name=note [(ngModel)]=note>
+    <button (click)="send()" [disabled]="buttonStatus"> 
+        send
+
+    </button>

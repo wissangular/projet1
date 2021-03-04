@@ -1,4 +1,6 @@
-<p>pere 1</p>
+<!--<p>pere 1</p>
 <app-fils [ordre] ="tab[0]" [villenaissance]="sud"></app-fils>
 <app-fils [ordre] ="tab[1]" [villenaissance]="nord"></app-fils>
-<app-fils [ordre] ="tab[2]" [villenaissance]="capitale"></app-fils>
+<app-fils [ordre] ="tab[2]" [villenaissance]="capitale"></app-fils>-->
+<h3>Moyenne de mes enfants {{moyenne}}</h3>
+<app-fils *ngFor="let enfant of enfants" [nom]="enfant" (message)="computeAvg($event)"></app-fils>
